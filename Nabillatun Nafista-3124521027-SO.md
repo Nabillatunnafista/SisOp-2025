@@ -191,11 +191,11 @@ Konversi bagian pecahan:
 ```
 0.654 × 16 = 10, sisa 0.464 (A)
 0.464 × 16 = 7, sisa 0.424 (7)
-0.424 × 16 = 6, sisa 0.784 (6)
+0.424 × 16 = 6, sisa 0.784 (6) ( dibulatkan 8)
 ```
 Gabungkan hasilnya:
 ```
-348,654₁₀ = 15C.A76₁₆
+348,654₁₀ = 15C.A78₁₆
 ```
 ### 11. Konversi Bilangan Biner ke Desimal
 #### Soal:
@@ -255,13 +255,12 @@ Setiap digit BCD dikonversi ke biner:
 8 = 1000
 7 = 0111
 ```
-Jadi,
+Jadi, 1987 (BCD) = 1 1001 1000 0111₂
 ```
-1987 (BCD) = 0001100110000111₂
 ```
 ### 14. Konversi Bilangan Biner ke BCO
 **Soal:**
-111111010012
+11111101001₂
 
 **Jawab:**
 Pisahkan setiap 3 digit dari kanan, tambahkan 0 dua di depan:
@@ -277,7 +276,7 @@ Jadi, hasilnya **3751**
 
 ### 15. Konversi Bilangan Biner ke BCH
 **Soal:**
-11011111001011102
+1101111100101110₂
 
 **Jawab:**
 Pisahkan setiap 4 digit dari kanan:
@@ -316,7 +315,7 @@ Jadi, **1111 0000 1101 1110** dalam biner adalah **F0DE** dalam heksadesimal.
 - Ini adalah bilangan **positif**.
 - Nilai desimalnya adalah **127**.
 
-Jadi, **bilangan biner 01111111 adalah positif (127).**
+Jadi, **bilangan biner 01111111 adalah Positif (127).**
 
 ---
 
@@ -338,7 +337,7 @@ Karena bilangan awal negatif, maka hasilnya adalah **-120**.
 
 ### 19. Konversi ASCII Code ke Karakter
 **Soal:**
-4116
+41₁₆
 
 **Jawab:**
 ```
@@ -354,9 +353,9 @@ a
 
 **Jawab:**
 ```
-a = 6116
+a = 61₁₆
 ```
-Jadi, hasilnya **6116**
+Jadi, hasilnya **61₁₆**
 
 ---
 

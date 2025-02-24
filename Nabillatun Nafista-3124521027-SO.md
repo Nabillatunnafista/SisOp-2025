@@ -1,5 +1,4 @@
-# Nabillatunnafista_27_Sistem_Operasi
-# NABILLATUN NAFISTA (3124521027) SISTEM OPERASI
+## NABILLATUN NAFISTA (3124521027) SISTEM OPERASI
 
 ## SISTEM BILANGAN
 ## 1. a. Bilangan biner adalah bilangan yang berbasis (**dua**).

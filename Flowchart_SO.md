@@ -31,3 +31,8 @@ Tugas mata kuliah Sistem Operasi pertemuan ketiga yang disusun oleh Nabillatun N
 | 17. | **User Login** | Pengguna memasukkan nama pengguna dan kata sandi untuk masuk. |
 | 18. | **Muat Lingkungan Pengguna (Desktop/Shell)** | Lingkungan pengguna (desktop grafis atau shell baris perintah) dimuat. |
 | 19. | **Sistem Siap digunakan** | Komputer siap digunakan. |
+
+---
+
+
+[Nabillatun Nafista 3124521027 ]

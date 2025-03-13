@@ -6,7 +6,7 @@ Tugas mata kuliah Sistem Operasi pertemuan ketiga yang disusun oleh Nabillatun N
 **Buat flowchart untuk proses dari komputer dinyalakan, bootstrap, hingga komputer bisa digunakan.**
 
 ### Flowchart
-![Image Alt](https://github.com/Nabillatunnafista/SisOp-2025/blob/c8d35d92c02b80b10de903fd744a6d2b99424c23/SO_flowchart.drawio.png)
+![Image Alt](https://github.com/Nabillatunnafista/SisOp-2025/blob/6a5fa1bf11f5e8a92ef89b791d242c9293c1343c/SO_flowchart_week3.drawio.png)
 
 ### Penjelasan Tahapan
 

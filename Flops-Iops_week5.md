@@ -1,5 +1,6 @@
 # SISTEM INFORMASI (FLOPS-IOPS)
 Tugas mata kuliah Sistem Operasi pertemuan kelima yang disusun oleh Nabillatun Nafista dengan NRP. 3124521027 dari kelas 1 TI-A
+
 ---
 ```
 #include <stdio.h>
@@ -94,7 +95,7 @@ $ ./iops32 $(nproc)
 ```
 ![iops32]()
 
-Kode `./iops64 $(nproc)` digunakan untuk menjalankan benchmark operasi integer 64-bit dengan jumlah core sesuai yang tersedia di sistem. Penggunaan `$(nproc)` memastikan semua core digunakan tanpa harus menentukan jumlahnya secara manual. Hasilnya menunjukkan throughput per thread serta total kinerja CPU, yang bisa digunakan untuk menganalisis efisiensi multi-core.
+Kode `./iops32 $(nproc)` digunakan untuk menjalankan benchmark operasi integer 64-bit dengan jumlah core sesuai yang tersedia di sistem. Penggunaan `$(nproc)` memastikan semua core digunakan tanpa harus menentukan jumlahnya secara manual. Hasilnya menunjukkan throughput per thread serta total kinerja CPU, yang bisa digunakan untuk menganalisis efisiensi multi-core.
 
 ---
 

@@ -189,7 +189,7 @@ $ ./flops32 $(nproc)
 ```
 ![flops32](https://github.com/Nabillatunnafista/SisOp-2025/blob/68895439a9f23dfff7eda7176e57822830f41a29/Flops_Iops_week5_gambar/flops32.png)
 
-Hasil benchmark ini menunjukkan bahwa CPU memiliki throughput maksimum sekitar **35.4 Gigaflops**, yang berarti mapu menangani sekitar **35.4 miliar operasi floating-point 64-bit per detik**. Performa per core mencapai **3.58 Gigaflops**, yang mengindikasikan bahwa prosesor ini menggunakan sekitar **10-12 core** selama pengujian.
+Hasil benchmark ini menunjukkan bahwa program iops64 menguji kinerja operasi floating-point 64-bit dan menunjukkan bahwa CPU mencapai throughput maksimum sekitar 20 Gigaflops. Kinerja per core mencapai sekitar 5 Gigaflops, mengindikasikan bahwa prosesor menggunakan sekitar 4 core selama pengujian.
 
 ---
 
@@ -338,7 +338,7 @@ $ ./iops64 $(nproc)
 ```
 ![iops64](https://github.com/Nabillatunnafista/SisOp-2025/blob/68895439a9f23dfff7eda7176e57822830f41a29/Flops_Iops_week5_gambar/iops64.png)
 
-Hasil benchmark menunjukkan operasi integer 64-bit per detik di tiap thread dengan total IOPS **30.3 Gigaops**. Throughput maksimum CPU **30.32 Gigaops**, sementara performa single core **3.65 Gigaops**, menandakan scaling multi-thread yang cukup mudah.
+Hasil benchmark menunjukkan program iops64 menguji kinerja operasi integer 64-bit dan menunjukkan bahwa CPU mencapai throughput maksimum sekitar 23 Gigaops. Kinerja per core mencapai sekitar 5.8 Gigaops, mengindikasikan bahwa scaling multi-thread cukup baik. Namun, terjadi kesalahan segmentasi (core dumped) selama pengujian.
 
 ---
 
@@ -484,7 +484,7 @@ $ ./flops64 $(nproc)
 ```
 ![flops64](https://github.com/Nabillatunnafista/SisOp-2025/blob/68895439a9f23dfff7eda7176e57822830f41a29/Flops_Iops_week5_gambar/flops64.png)
 
-Benchmark ini mengukur operasi floating-point **64-bit** per detik di tiap thread. Hasilnya, total FLOPS mencapai **35.4 GigaFlops**, dengan single core di **3.58 GigaFlops**. Performa antar thread bervariasi yang kemungkinan karena alokasi CPU. Sayangnya, tidak ada kontrol beban atau opsi durasi uji, jadi ada kemungkinan untuk boros sumber daya. 
+Benchmark ini mengukur program iops64 untuk menguji kinerja operasi floating-point 64-bit dan menunjukkan bahwa CPU mencapai throughput maksimum sekitar 20 Gigaflops. Kinerja per core mencapai sekitar 5 Gigaflops, mengindikasikan bahwa prosesor menggunakan sekitar 4 core selama pengujian.
 
 ---
 
@@ -494,14 +494,14 @@ $ ./iops64 8
 ```
 ![iops64try](https://github.com/Nabillatunnafista/SisOp-2025/blob/68895439a9f23dfff7eda7176e57822830f41a29/Flops_Iops_week5_gambar/iops64%208.png)
 
-Benchmark `./iops64 8` ini mengukur seberapa cepat CPU dalam menjalankan operasi integer **64-bit** per detik. Hasilnya menunjukkan bahwa CPU dapat mencapai **30,58 Gigaops** dengan kinerja single-core mencapai **4,01 Gigaops**. Setiap thread menangani sekitar **3,5 hingga 4 miliar** operasi per detik, yang menunjukkan distribusi beban kerja yang merata di antara core yang tersedia. 
+Benchmark `./iops64 8` Program iops64 menguji kinerja operasi integer 64-bit dan menunjukkan bahwa CPU mencapai throughput maksimum sekitar 22.8 Gigaops. Kinerja per core mencapai sekitar 3 Gigaops, mengindikasikan bahwa scaling multi-thread cukup baik.
 
 ```
 $ ./flops64 8
 ```
 ![flops64try](https://github.com/Nabillatunnafista/SisOp-2025/blob/68895439a9f23dfff7eda7176e57822830f41a29/Flops_Iops_week5_gambar/iops64.png)
 
-Benchmark `./flops64 8` ini mengukur kinerja CPU dalam menangani operasi floating point **64-bit** per detik. Hasilnya menunjukkan throughput maksimum CPU sebesar **34,33 Gigaflops**, dengan kinerja single-core mencapai **5,52 Gigaflops**. Distribusi beban antar threadnya cukup beragam, karena beberapa thread bisa lebih dari **5 miliar operasi** per detik, sementara lainnya di kisaran **2,9 hingga 4,9 miliar**.
+Benchmark `./flops64 8` program iops64 menguji kinerja operasi integer 64-bit dan menunjukkan bahwa CPU mencapai throughput maksimum sekitar 23 Gigaops. Kinerja per core mencapai sekitar 5.8 Gigaops, mengindikasikan bahwa scaling multi-thread cukup baik.
 
 
 > sumber : https://github.com/ferryastika/flops-iops

@@ -9,4 +9,4 @@ Tugas pertemuan ke-7
 ---
 
 ### PPT EVOLUSI TEKNOLOGI
-[PPT Evolusi Teknologi](https://github.com/Nabillatunnafista/SisOp-2025/blob/a35ad054619bbed57b39b95822ea9a028442aba9/pertemuan%20ke%207/Evolusi%20Teknologi.pdf)
+[PPT Evolusi Teknologi](https://github.com/Nabillatunnafista/SisOp-2025/blob/69a282bb0f247f6e15311a62dbe2a114e30db337/pertemuan%20ke%207/Evolusi%20Teknologi.pdf)

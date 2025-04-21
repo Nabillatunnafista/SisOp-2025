@@ -16,7 +16,7 @@ Tugas pertemuan ke-7
 
 **Multithread** adalah pendekatan di mana sebuah program dapat menjalankan beberapa thread secara bersamaan (paralel), memungkinkan tugas-tugas berjalan secara simultan. Setiap thread bisa menangani bagian tertentu dari program, seperti satu thread untuk menangani antarmuka pengguna dan thread lain untuk memproses data di latar belakang. Dengan cara ini, aplikasi menjadi lebih responsif dan efisien karena tidak tergantung pada satu alur eksekusi saja.
 
-![Single Thread](https://github.com/Nabillatunnafista/SisOp-2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/multitheard.png)
+![Multithread](https://github.com/Nabillatunnafista/SisOp-2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/multitheard.png)
 
 ---
 

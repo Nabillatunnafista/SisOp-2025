@@ -1,6 +1,8 @@
 # SISTEM OPERASI  
 Nama: Nabillatun Nafista 
+
 NRP : 33124521027 
+
 Kelas: Teknik Informatika A PSDKU Lamongan  
 Semester : 2 (Dua)
 - [Pertemuan 1 : Latihan Sistem Bilangan](https://github.com/Nabillatunnafista/SisOp-2025/blob/a69ab9b429a81218d36b97819e74fe977d5efc8e/Sistem%20Bilangan.md)

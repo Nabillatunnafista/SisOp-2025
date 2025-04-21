@@ -375,7 +375,7 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
-![Single Thread](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
+![nomor 22](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
 
 ---
 
@@ -421,7 +421,7 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
-![Single Thread](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
+![nomor 23](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
 
 ---
 
@@ -486,7 +486,7 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
-![Single Thread](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
+![nomor 24](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
 
 ---
 
@@ -537,7 +537,7 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
-![Single Thread](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
+![nomor 25](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
 
 ---
 

@@ -1,7 +1,9 @@
-# SISTEM OPERASI #  
-Nama  : Nabillatun Nafista  
-NRP   : 3124521027
+# SISTEM OPERASI # 
+
+Nama  : Nabillatun Nafista  (3124521027)
+
 Kelas : 1 Teknik Informatika - A
+
 Tugas pertemuan ke-7  
 
 ---

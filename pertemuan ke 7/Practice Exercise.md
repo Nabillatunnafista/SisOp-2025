@@ -283,7 +283,9 @@ b. Jumlah thread unik yang dibuat:* Kode ini membuat satu thread unik di setiap 
 ### 4.19 Program yang ditunjukkan pada Gambar 4.23 menggunakan Pthreads. Apa yang akan menjadi output dari program tersebut?
 
 *Jawaban:* 
-
+Output:
+- Child: 5
+- Parent: 0
 
 ---
 
@@ -375,7 +377,7 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
-![nomor 22](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
+![nomor 22](https://github.com/Nabillatunnafista/SisOp-2025/blob/5721fdf5010eb299b74fa3c1171c97ef14fbd587/pertemuan%20ke%207/gambar/statistik.jpg)
 
 ---
 
@@ -421,7 +423,7 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
-![nomor 23](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
+![nomor 23](https://github.com/Nabillatunnafista/SisOp-2025/blob/5721fdf5010eb299b74fa3c1171c97ef14fbd587/pertemuan%20ke%207/gambar/bil%20prima.jpg)
 
 ---
 
@@ -486,7 +488,7 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
-![nomor 24](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
+![nomor 24](https://github.com/Nabillatunnafista/SisOp-2025/blob/5ee1ae53de11e777736946c47be6728c73a31bb8/pertemuan%20ke%207/gambar/montecar1.jpg)
 
 ---
 
@@ -537,7 +539,7 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
-![nomor 25](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
+![nomor 25](https://github.com/Nabillatunnafista/SisOp-2025/blob/5721fdf5010eb299b74fa3c1171c97ef14fbd587/pertemuan%20ke%207/gambar/montecar.jpg)
 
 ---
 

@@ -309,8 +309,235 @@ Dua nilai yang mungkin untuk state adalah PTHREAD_CANCEL_ENABLE dan PTHREAD_CANC
 1.  Memperbarui Struktur Data Bersama: Jika sebuah thread sedang memperbarui struktur data yang diakses oleh thread lain (misalnya, linked list, tabel hash), pembatalan di tengah-tengah operasi ini dapat meninggalkan struktur data dalam keadaan rusak. Thread lain yang mencoba mengakses struktur data ini mungkin mengalami perilaku yang tidak benar atau bahkan crash. Untuk mencegah hal ini, pembatalan thread dapat dinonaktifkan selama bagian kode yang memodifikasi struktur data bersama, dan diaktifkan kembali setelah modifikasi selesai. Mekanisme sinkronisasi seperti mutex atau kunci biasanya digunakan bersamaan dengan penonaktifan pembatalan untuk memastikan akses eksklusif dan penyelesaian operasi kritis.
 
 2.  Operasi I/O Kritis: Beberapa operasi input/output mungkin melibatkan beberapa langkah atau transfer data yang harus diselesaikan secara atomik. Misalnya, menulis blok data ke disk atau mengirim serangkaian paket jaringan. Jika sebuah thread dibatalkan di tengah-tengah operasi I/O seperti itu, data mungkin tertulis sebagian atau koneksi jaringan mungkin tertinggal dalam keadaan tidak stabil. Ini dapat menyebabkan kehilangan data, kerusakan file, atau masalah komunikasi. Menonaktifkan pembatalan selama operasi I/O kritis dan memastikan penyelesaian atau rollback yang tepat dapat mencegah masalah ini.
-3.  
-Dalam kedua contoh ini, menonaktifkan pembatalan thread memberikan jaminan bahwa operasi penting akan diselesaikan tanpa gangguan, menjaga konsistensi dan keandalan program. Setelah bagian kode kritis selesai, aplikasi harus mengaktifkan kembali pembatalan thread untuk memungkinkan thread merespons permintaan pembatalan di lain waktu.
+3.  Dalam kedua contoh ini, menonaktifkan pembatalan thread memberikan jaminan bahwa operasi penting akan diselesaikan tanpa gangguan, menjaga konsistensi dan keandalan program. Setelah bagian kode kritis selesai, aplikasi harus mengaktifkan kembali pembatalan thread untuk memungkinkan thread merespons permintaan pembatalan di lain waktu.
+
+---
+
+## 4.22 Program Multithreaded Menghitung Statistik
+
+**Deskripsi:**
+Program ini menerima daftar angka dari argumen baris perintah, lalu menggunakan tiga thread untuk menghitung nilai rata-rata, minimum, dan maksimum.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+int average, minimum, maximum;
+int *numbers;
+int count;
+
+void* calculate_average(void* arg) {
+    int sum = 0;
+    for (int i = 0; i < count; i++) sum += numbers[i];
+    average = sum / count;
+    pthread_exit(0);
+}
+
+void* calculate_minimum(void* arg) {
+    minimum = numbers[0];
+    for (int i = 1; i < count; i++)
+        if (numbers[i] < minimum) minimum = numbers[i];
+    pthread_exit(0);
+}
+
+void* calculate_maximum(void* arg) {
+    maximum = numbers[0];
+    for (int i = 1; i < count; i++)
+        if (numbers[i] > maximum) maximum = numbers[i];
+    pthread_exit(0);
+}
+
+int main(int argc, char *argv[]) {
+    if (argc < 2) {
+        printf("Gunakan: %s angka1 angka2 ...\n", argv[0]);
+        return 1;
+    }
+
+    count = argc - 1;
+    numbers = (int*) malloc(count * sizeof(int));
+    for (int i = 0; i < count; i++) numbers[i] = atoi(argv[i + 1]);
+
+    pthread_t tid1, tid2, tid3;
+    pthread_create(&tid1, NULL, calculate_average, NULL);
+    pthread_create(&tid2, NULL, calculate_minimum, NULL);
+    pthread_create(&tid3, NULL, calculate_maximum, NULL);
+
+    pthread_join(tid1, NULL);
+    pthread_join(tid2, NULL);
+    pthread_join(tid3, NULL);
+
+    printf("Nilai rata-rata adalah %d\n", average);
+    printf("Nilai minimum adalah %d\n", minimum);
+    printf("Nilai maksimum adalah %d\n", maximum);
+
+    free(numbers);
+    return 0;
+}
+```
+![Single Thread](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
+
+---
+
+## 4.23 Program Multithreaded Menentukan Bilangan Prima
+
+**Deskripsi:**
+Program menerima angka dari pengguna dan mencetak semua bilangan prima yang kurang dari atau sama dengan angka tersebut dalam thread terpisah.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <stdbool.h>
+
+int batas;
+
+bool is_prime(int num) {
+    if (num < 2) return false;
+    for (int i = 2; i * i <= num; i++)
+        if (num % i == 0) return false;
+    return true;
+}
+
+void* cari_prima(void* arg) {
+    printf("Bilangan prima <= %d:\n", batas);
+    for (int i = 2; i <= batas; i++)
+        if (is_prime(i)) printf("%d ", i);
+    printf("\n");
+    pthread_exit(0);
+}
+
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        printf("Gunakan: %s bilangan\n", argv[0]);
+        return 1;
+    }
+
+    batas = atoi(argv[1]);
+    pthread_t thread;
+    pthread_create(&thread, NULL, cari_prima, NULL);
+    pthread_join(thread, NULL);
+
+    return 0;
+}
+```
+![Single Thread](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
+
+---
+
+## 4.24 Estimasi Nilai Pi dengan Monte Carlo (Multithreaded)
+
+**Deskripsi:**
+Program menggunakan metode Monte Carlo untuk memperkirakan nilai Pi dengan thread-thread yang menghasilkan titik acak.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <time.h>
+
+int total_poin = 0;
+int poin_dalam_lingkaran = 0;
+pthread_mutex_t lock;
+
+void* hitung_pi(void* arg) {
+    int jumlah_poin = *((int*)arg);
+    int hitung_dalam = 0;
+    double x, y;
+
+    for (int i = 0; i < jumlah_poin; i++) {
+        x = (double)rand() / RAND_MAX * 2.0 - 1.0;
+        y = (double)rand() / RAND_MAX * 2.0 - 1.0;
+        if (x * x + y * y <= 1.0) hitung_dalam++;
+    }
+
+    pthread_mutex_lock(&lock);
+    poin_dalam_lingkaran += hitung_dalam;
+    pthread_mutex_unlock(&lock);
+
+    pthread_exit(0);
+}
+
+int main(int argc, char *argv[]) {
+    if (argc != 3) {
+        printf("Gunakan: %s <jumlah_poin> <jumlah_thread>\n", argv[0]);
+        return 1;
+    }
+
+    total_poin = atoi(argv[1]);
+    int jumlah_thread = atoi(argv[2]);
+
+    pthread_t threads[jumlah_thread];
+    int poin_per_thread = total_poin / jumlah_thread;
+
+    srand(time(NULL));
+    pthread_mutex_init(&lock, NULL);
+
+    for (int i = 0; i < jumlah_thread; i++)
+        pthread_create(&threads[i], NULL, hitung_pi, &poin_per_thread);
+
+    for (int i = 0; i < jumlah_thread; i++)
+        pthread_join(threads[i], NULL);
+
+    double pi = 4.0 * (double)poin_dalam_lingkaran / total_poin;
+    printf("Estimasi nilai Pi = %.6f\n", pi);
+
+    pthread_mutex_destroy(&lock);
+    return 0;
+}
+```
+![Single Thread](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
+
+---
+
+## 4.25 Estimasi Nilai Pi dengan OpenMP
+
+**Deskripsi:**
+Versi alternatif dari soal 4.24, tetapi menggunakan OpenMP untuk paralelisasi alih-alih menggunakan thread secara manual.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <omp.h>
+#include <time.h>
+
+int main(int argc, char *argv[]) {
+    if (argc != 3) {
+        printf("Gunakan: %s <jumlah_poin> <jumlah_thread>\n", argv[0]);
+        return 1;
+    }
+
+    int total_poin = atoi(argv[1]);
+    int jumlah_thread = atoi(argv[2]);
+    int poin_dalam_lingkaran = 0;
+
+    double start_time = omp_get_wtime();
+
+    #pragma omp parallel num_threads(jumlah_thread)
+    {
+        unsigned int seed = time(NULL) ^ omp_get_thread_num();
+
+        #pragma omp for reduction(+:poin_dalam_lingkaran)
+        for (int i = 0; i < total_poin; i++) {
+            double x = (double)rand_r(&seed) / RAND_MAX * 2.0 - 1.0;
+            double y = (double)rand_r(&seed) / RAND_MAX * 2.0 - 1.0;
+            if (x * x + y * y <= 1.0) poin_dalam_lingkaran++;
+        }
+    }
+
+    double pi = 4.0 * poin_dalam_lingkaran / total_poin;
+    double end_time = omp_get_wtime();
+
+    printf("Estimasi nilai Pi     = %.6f\n", pi);
+    printf("Titik dalam lingkaran = %d\n", poin_dalam_lingkaran);
+    printf("Total titik           = %d\n", total_poin);
+    printf("Jumlah thread         = %d\n", jumlah_thread);
+    printf("Waktu eksekusi (s)    = %.6f\n", end_time - start_time);
+
+    return 0;
+}
+```
+![Single Thread](https://github.com/Nabillatunnafista/SisOp2025/blob/585f070dafc3dc005b94e889104693a93d2d0060/pertemuan%20ke%207/gambar/gambar%20single%20dan%20multi%20thread.png)
 
 ---
 

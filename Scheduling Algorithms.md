@@ -166,6 +166,19 @@ Kode C ini mengimplementasikan algoritma penjadwalan CPU SJF Non-Preemptive deng
 lalu memilih yang memiliki burst time terpendek di antara proses yang sudah tiba untuk dieksekusi. Ini menghitung dan mencetak completion time, turnaround time, waiting time setiap proses, serta rata-ratanya.
 
 ### Gantt Chart
+```
+| P1 | P3 | P4 | P2 |
+0    7    8    10   14
+```
+#### Average Turnaround Time (⟨TAT⟩)
+⟨TAT⟩=(3+8+16+26)/4
+⟨TAT⟩=53/4
+⟨TAT⟩=13.25
+
+#### Average Waiting Time (⟨WT⟩)
+⟨WT⟩=(0+3+8+16)/4
+⟨WT⟩=27/4
+⟨WT⟩=6.75
 
 ---
 3. Buatkan Analisa terkait SRTF Scheduling Algorithm (Preemptive)

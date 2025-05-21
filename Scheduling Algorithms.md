@@ -1,4 +1,4 @@
-# SISTEM OPERASI # 
+# SISTEM OPERASI SCHEDULING ALGORITHMS # 
 
 Nama  : Nabillatun Nafista  
 

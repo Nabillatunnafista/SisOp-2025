@@ -60,7 +60,7 @@ int main()
 }
 ```
 ### Output :
-![Image Alt]()
+![Image Alt](https://github.com/Nabillatunnafista/SisOp-2025/blob/5ecd1b357c571137e97cbb76517dc4e85eaee44c/img/so1.png)
 
 ### Analisa :
 Kode C ini mengimplementasikan algoritma penjadwalan CPU SJF (Shortest Job First) Non-Preemptive. Ia membaca burst time proses, lalu mengurutkannya (menggunakan bubble sort) dari yang terpendek untuk dieksekusi. 
@@ -159,7 +159,7 @@ int main()
 }
 ```
 ### Output :
-![Image Alt]()
+![Image Alt](https://github.com/Nabillatunnafista/SisOp-2025/blob/5ecd1b357c571137e97cbb76517dc4e85eaee44c/img/so2.png)
 
 ### Analisa :
 Kode C ini mengimplementasikan algoritma penjadwalan CPU SJF Non-Preemptive dengan Arrival Time. Program mengurutkan proses berdasarkan waktu kedatangan, 
@@ -234,7 +234,7 @@ int main()
 }
 ```
 ### Output :
-![Image Alt]()
+![Image Alt](https://github.com/Nabillatunnafista/SisOp-2025/blob/5ecd1b357c571137e97cbb76517dc4e85eaee44c/img/so3.png)
 
 ### Analisa :
 Kode C ini mengimplementasikan algoritma penjadwalan CPU SRTF (Shortest Remaining Time First), yaitu versi preemptive dari SJF. Program membaca waktu kedatangan (arrival time) dan burst time setiap proses, 

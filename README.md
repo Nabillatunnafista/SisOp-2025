@@ -18,5 +18,5 @@ Semester : 2 (Dua)
    - [PPT evolusi teknologi processor Intel](https://github.com/Nabillatunnafista/SisOp-2025/blob/a69ab9b429a81218d36b97819e74fe977d5efc8e/pertemuan%20ke%207/Evolusi_Teknologi_PPT.md) 
    - [Practice Exercises](https://github.com/Nabillatunnafista/SisOp-2025/blob/a69ab9b429a81218d36b97819e74fe977d5efc8e/pertemuan%20ke%207/Practice%20Exercise.md)
 - [Pertemuan 8 : CPU SCHEDULING 5.17-5.18](https://github.com/Nabillatunnafista/SisOp-2025/blob/2743d4eeac95a04113154aed446e926aa39fe29c/CPU%20SCHEDULING%205.17%20-%205.18.md)
-- [Pertemuan 9 : SCHEDULING ALGORITHMS]()
+- [Pertemuan 9 : SCHEDULING ALGORITHMS](https://github.com/Nabillatunnafista/SisOp-2025/blob/099b4ef88100ebfd8b52166e5f774e1721c7988d/Scheduling%20Algorithms.md)
 

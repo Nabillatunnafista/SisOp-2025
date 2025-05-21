@@ -181,7 +181,7 @@ lalu memilih yang memiliki burst time terpendek di antara proses yang sudah tiba
 ⟨WT⟩=6.75
 
 ---
-3. Buatkan Analisa terkait SRTF Scheduling Algorithm (Preemptive)
+## 3. Buatkan Analisa terkait SRTF Scheduling Algorithm (Preemptive)
 
 ### Code :
 
@@ -255,9 +255,23 @@ lalu mengurutkannya berdasarkan arrival time. Selama eksekusi, pada setiap unit 
 Jika sisa waktu sebuah proses menjadi nol, berarti proses tersebut selesai, dan program akan menghitung serta mencetak completion time, turnaround time, dan waiting time untuk proses tersebut, serta akumulasi rata-ratanya.
 
 ### Gantt Chart
+```
+| P1 | P3 | P2 | P4 |
+0     7    8    12   16
+```
+#### Average Turnaround Time (⟨TAT⟩):
+⟨TAT⟩=(7+4+10+11)/4
+⟨TAT⟩=32/4
+⟨TAT⟩=8.00
+
+#### Average Waiting Time (⟨WT⟩):
+⟨WT⟩=(0+3+6+7)/4
+⟨WT⟩=16/4
+⟨WT⟩=4.00
 
 ---
 
+[Nabillatun Nafista 3124521027 ]
 
 
 

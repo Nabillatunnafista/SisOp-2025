@@ -25,7 +25,7 @@ termasuk Gantt chart dan perhitungan waktu tunggu rata-rata.
 ---
 ### Untuk practice exercise yang relevan pada algoritma ini berada di latihan 5.4
 ## 1. SJF without arrival time (non-preemptive)
-![Image Alt]()
+![Image Alt](https://github.com/Nabillatunnafista/SisOp-2025/blob/32103d9158fc6141745692fea8d1cf6c5b806dd7/img/tugas%20tambahan1.png)
 
 ### Analisa:
 SJF optimal dalam meminimalkan waktu tunggu rata-rata dan waktu penyelesaian rata-rata untuk sekumpulan proses yang diberikan. Namun, SJF dapat mengalami kelaparan (starvation) jika ada aliran proses pendek yang terus-menerus. Karena semua proses tiba pada waktu 0, tidak ada pertimbangan waktu kedatangan untuk penjadwalan awal.
@@ -73,7 +73,7 @@ Pertama, urutkan proses berdasarkan Waktu Burst:
     * Waktu Tunggu Rata-rata = $(0 + 1 + 3 + 7 + 12) / 5 = 23 / 5 = 4.6$ ms
       
 ## 2. SJF without arrival time (non-preemptive)
-![Image Alt]()
+![Image Alt](https://github.com/Nabillatunnafista/SisOp-2025/blob/32103d9158fc6141745692fea8d1cf6c5b806dd7/img/tugas%20tambahan%202.jpg)
 
 ### Analisa:
 Algoritma ini sangat cocok dan realistis untuk skenario yang diberikan karena secara akurat mempertimbangkan baik waktu kedatangan proses (yang berbeda) maupun sifat penjadwalan yang non-preemptive. Pada setiap titik keputusan (yaitu, ketika CPU bebas untuk menjadwalkan proses berikutnya), algoritma akan memilih proses dengan waktu burst paling kecil dari daftar proses yang sudah berada di antrean "siap" (yaitu, sudah tiba).
@@ -134,7 +134,7 @@ Pada algoritma SJF (Shortest Job First) dengan Waktu Kedatangan (Non-Preemptive)
     * **Waktu Tunggu Rata-rata** = $(0.0 + 8.6 + 7.0) / 3 = 15.6 / 3 = 5.2$ ms
 
 ## 3. SRTF (preemptive)
-![Image Alt]()
+![Image Alt](https://github.com/Nabillatunnafista/SisOp-2025/blob/32103d9158fc6141745692fea8d1cf6c5b806dd7/img/tugas%20tambahan%203.png)
 
 ### Analisa:
 Algoritma SRTF dirancang untuk meminimalkan waktu tunggu rata-rata dan waktu penyelesaian rata-rata. Dengan preemptive, algoritma ini dapat merespons dengan cepat terhadap kedatangan proses-proses pendek, yang sangat efisien untuk sistem interaktif. Namun, ada overhead dari konteks switching yang sering terjadi, dan juga bisa terjadi kelaparan (starvation) untuk proses-proses yang panjang jika ada aliran proses pendek yang terus-menerus. Untuk soal ini, SRTF akan mengeksekusi proses berdasarkan sisa waktu burst terkecil, dengan mempertimbangkan kedatangan proses baru untuk preemption.

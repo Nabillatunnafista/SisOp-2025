@@ -68,10 +68,17 @@ Kemudian, dihitung dan ditampilkan completion time, turnaround time, waiting tim
 
 ### Gantt Chart
 
+```mermaid
+gantt
+    dateFormat X
+    axisFormat %s
+    section Processes
+    P4:0,3
+    P2:3,8
+    P3:8,16
+    P1:16,26
 ```
-| P4 | P2 | P3 | P1 |
-0   3     8    16   26
-```
+    
 #### Average Turnaround Time (⟨TAT⟩)
 ⟨TAT⟩ = (3 + 8 + 16 + 26) / 4  
 ⟨TAT⟩ = 53 / 4  
@@ -166,9 +173,15 @@ Kode C ini mengimplementasikan algoritma penjadwalan CPU SJF Non-Preemptive deng
 lalu memilih yang memiliki burst time terpendek di antara proses yang sudah tiba untuk dieksekusi. Ini menghitung dan mencetak completion time, turnaround time, waiting time setiap proses, serta rata-ratanya.
 
 ### Gantt Chart
-```
-| P1 | P3 | P4 | P2 |
-0    7    8    10   14
+```mermaid
+gantt
+    dateFormat X
+    axisFormat %s
+    section Processes
+    P1:0,7
+    P3:7,8
+    P4:8,10
+    P2:10,14
 ```
 #### Average Turnaround Time (⟨TAT⟩)
 ⟨TAT⟩=(3+8+16+26)/4
@@ -255,10 +268,17 @@ lalu mengurutkannya berdasarkan arrival time. Selama eksekusi, pada setiap unit 
 Jika sisa waktu sebuah proses menjadi nol, berarti proses tersebut selesai, dan program akan menghitung serta mencetak completion time, turnaround time, dan waiting time untuk proses tersebut, serta akumulasi rata-ratanya.
 
 ### Gantt Chart
+```mermaid
+gantt
+    dateFormat X
+    axisFormat %s
+    section Processes
+    P1:0,7
+    P3:7,8
+    P2:8,12
+    P4:12,16
 ```
-| P1 | P3 | P2 | P4 |
-0     7    8    12   16
-```
+
 #### Average Turnaround Time (⟨TAT⟩):
 ⟨TAT⟩=(7+4+10+11)/4
 ⟨TAT⟩=32/4

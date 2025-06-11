@@ -45,9 +45,16 @@ Pertama, urutkan proses berdasarkan Waktu Burst:
 | $P_3$   | 8               |
 
 **Gantt Chart:**
-```
-| P2 | P1 | P4 | P5 | P3 |
-0    1    3    7    12   20
+```mermaid
+gantt
+    dateFormat X
+    axisFormat %s
+    section Processes
+    P2:0,1
+    P1:1,3
+    P4:3,7
+    P5:7,12
+    P3:12,20
 ```
 
 ### Perhitungan Metrik:
@@ -112,9 +119,15 @@ Pada algoritma SJF (Shortest Job First) dengan Waktu Kedatangan (Non-Preemptive)
     * Semua proses telah selesai.
 
 ### Gantt Chart:
-```
-| P1 | P3 | P2 |
-0.0  8.0  9.0  13.0
+
+```mermaid
+gantt
+    dateFormat X
+    axisFormat %s
+    section Processes
+    P1:0,8
+    P3:8,9
+    P2:9,13
 ```
 
 ### Perhitungan Metrik:
@@ -185,6 +198,7 @@ Pada algoritma SRTF, CPU selalu dijalankan oleh proses yang memiliki sisa waktu 
 | P1 | P2 | P3 | P2 | P1 | P4 | P1 | P3 |
 0    0.4  1.0  2.0  5.4  10.0 17.0 26.0
 ```
+
 ### Perhitungan Metrik:
 * **Waktu Selesai (Completion Time - CT):**
     * $P_2$: 5
